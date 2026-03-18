@@ -1,9 +1,9 @@
 
- # robo
+# RoboLogger
 
 ## Introduction
 
-robo is an opinionated Go logging package that writes application logs to per-run files under the user config directory.
+RoboLogger is an opinionated Go logging package that writes semi-structured text logs.
 It supports two logger implementations behind one interface as well as console output:
 
 - `LogFile`: opinionated,human-readable semi-structured text logs
@@ -11,9 +11,9 @@ It supports two logger implementations behind one interface as well as console o
 
 Additionally it adds a `FATAL` level that Go's Slog does not implement.
 
-## What robo Does
+## What RoboLogger Does
 
-robo gives you a simple global logger (`Log`) with methods:
+RoboLogger gives you a simple global logger (`Log`) with methods:
 
 - `INFO`
 - `WARNING`
@@ -68,7 +68,7 @@ These strings change wording when `RUN_LEVEL == -4`.
 
 ## Global Configuration Variables
 
-Defined in `roboConfig.go`:
+Defined in `RoboLoggerConfig.go`:
 
 - `ProgramName` (default placeholder: `Application Name`)
 - `Version` (default: `0.0.1.dev`)
@@ -137,13 +137,15 @@ func main() {
 }
 ```
 
-Outputs
+### Outputs
+
+Log file
 
 ```log
 -----------------------------------
 Application Name v0.0.1 for linux 
-Executed by: toolbox
-User: root
+Executed by: root
+Hostname: toolbox
 Time: 2026-03-18T16:05:15+01:00
 -----------------------------------
 
@@ -155,6 +157,8 @@ Time: 2026-03-18T16:05:15+01:00
 2026/03/18 16:05:15 INFO: ###### END OF DEBUG SESSION ######
 
 ```
+
+JSON Slog
 
 ```JSON
 {"time":"2026-03-18T16:05:15.810208463+01:00","level":"INFO","msg":"switched logger","mode":"json"}

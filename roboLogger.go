@@ -104,7 +104,7 @@ func buildHeader() string {
 	header := "-----------------------------------\n"
 	header += fmt.Sprintf("%s v%s for %s \n", ProgramName, Version, OS)
 	header += fmt.Sprintf("Executed by: %s\n", username.Username)
-	header += fmt.Sprintf("User: %s\n", hostname)
+	header += fmt.Sprintf("Hostname: %s\n", hostname)
 	header += fmt.Sprintf("Time: %s\n", time.Now().Format(time.RFC3339))
 	header += "-----------------------------------\n\n"
 	return header
