@@ -57,14 +57,7 @@ Structured JSON logging through `log/slog`. Includes a custom fatal level consta
 `RUN_LEVEL` controls debug logging behavior for `LogFile`:
 
 - `-4`: debug mode enabled (`Debug` entries are written)
-- any other value: debug entries are ignored
-
-The package also provides three helpers:
-
-- `StartLog()` returns a start-of-session banner string
-- `EndLog()` returns an end-of-session banner string
-
-These strings change wording when `RUN_LEVEL == -4`.
+- any other run level: debug entries are ignored
 
 ## Global Configuration Variables
 
@@ -87,7 +80,7 @@ import (
     "flag"
     "fmt"
  
-    robo "github.com/yegoryeliz/robo"
+    robo "github.com/yegoryeliz/robologger"
 )
 
 
