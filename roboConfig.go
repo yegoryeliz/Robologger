@@ -21,9 +21,6 @@ var (
 	// Do not set this variable directly; it is set once based on CONFIG_DIR and ProgramName. LOG_DIR is the directory where log files will be stored.
 	LOG_DIR = CONFIG_DIR + "/" + ProgramName + "/logs"
 
-	// Do not set this variable directly; it is set once based on CONFIG_DIR and ProgramName. DB_DIR is the directory where database files will be stored.
-	DB_DIR = CONFIG_DIR + "/" + ProgramName + "/db"
-
 	// Do not set this variable directly, outside main.go init() function; use command line flags to configure it. LOG_TO_CONSOLE determines whether logs should also be output to the console.
 	LOG_TO_CONSOLE bool = false
 
