@@ -3,8 +3,9 @@
 
 ## Introduction
 
-RoboLogger (Robust Logger) is an opinionated Go logging package that writes semi-structured text logs.
-It supports two logger implementations behind one interface as well as console output:
+RoboLogger (Robust Logger) is an opinionated Go logging package that writes semi-structured human-readable text logs. It is designed for use in scenarios where logs are often reviewed by the end users of the application with limited knowledge of it's inner workings, for example an automation framework.
+
+Out of the box RoboLogger supports two logger implementations LOG (text) and JSON, as well as console output. The interface can be easily extended into other use cases, such as a time-series database implementation, for example.
 
 - `LogFile`: opinionated,human-readable semi-structured text logs
 - `Slog`: JSON logs using Go's `log/slog` for when machine parsable logs are prefered.
