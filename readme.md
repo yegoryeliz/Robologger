@@ -74,7 +74,7 @@ Defined in `RoboLoggerConfig.go`:
 - `Version` (default: `0.0.1.dev`)
 - `OS` (auto-detected)
 - `CONFIG_DIR` (from `os.UserConfigDir()`)
-- `LOG_DIR` and `DB_DIR` (derived paths)
+- `LOG_DIR` (derived paths)
 - `LOG_TO_CONSOLE` (default `false`)
 - `RUN_LEVEL` (default `0`)
 
