@@ -34,7 +34,7 @@ The default base directory is `os.UserConfigDir()` and paths are built from the 
 
 ## Logger Modes
 
-### `LogFile` (default)
+### LogFile (default)
 
 Human-readable output with pairwise key-value formatting:
 
@@ -44,7 +44,7 @@ Human-readable output with pairwise key-value formatting:
     METHOD: oauth
 ```
 
-### `Slog`
+### Slog
 
 Structured JSON logging through `log/slog`. Includes a custom fatal level constant:
 
